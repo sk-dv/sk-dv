@@ -46,7 +46,7 @@ export const App = () => {
           <Center>
             <Float floatIntensity={5} speed={2}>
               <Text3D
-                font={"/fonts/sf_mono_light.json"}
+                font={"/src/assets/sf_mono_light.json"}
                 bevelEnabled
                 curveSegments={200}
                 bevelThickness={0.01}
