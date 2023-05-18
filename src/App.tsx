@@ -11,8 +11,6 @@ import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 import { Suspense, useState } from "react";
 import "./input.css";
-import github from "./assets/github.png";
-import linkedin from "./assets/linkedin.png";
 
 export const App = () => {
   const [points] = useState(() =>
@@ -46,7 +44,7 @@ export const App = () => {
           <Center>
             <Float floatIntensity={5} speed={2}>
               <Text3D
-                font={"/src/assets/sf_mono_light.json"}
+                font={"/assets/sf_mono_light.json"}
                 bevelEnabled
                 curveSegments={200}
                 bevelThickness={0.01}
@@ -64,13 +62,13 @@ export const App = () => {
       <div className="fixed bottom-0 flex flex-row w-full justify-center my-8">
         <a href="https://github.com/sk-dv" target="_blank">
           <div className="w-14">
-            <img src={github} />
+            <img src="/assets/github.png" />
           </div>
         </a>
         <p className="mx-4" />
         <a href="https://www.linkedin.com/in/felipeosornio/" target="_blank">
           <div className="w-14">
-            <img src={linkedin} />
+            <img src="/assets/linkedin.png" />
           </div>
         </a>
       </div>
