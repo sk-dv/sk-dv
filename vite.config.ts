@@ -4,7 +4,6 @@ import * as path from 'path'
 
 
 export default defineConfig({
-  base: '/sk-dv/',
   plugins: [react()],
   resolve: {
     alias: {

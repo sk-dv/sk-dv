@@ -47,7 +47,7 @@ export const App = () => {
           <Center>
             <Float floatIntensity={5} speed={2}>
               <Text3D
-                font={"/sk-dv/futura.json"}
+                font={"/futura.json"}
                 bevelEnabled
                 curveSegments={200}
                 bevelThickness={0.01}
