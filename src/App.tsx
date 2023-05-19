@@ -11,6 +11,8 @@ import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 import { Suspense, useState } from "react";
 import "./input.css";
+import github from "./assets/github.png";
+import linkedin from "./assets/linkedin.png";
 
 export const App = () => {
   const [points] = useState(() =>
@@ -34,8 +36,9 @@ export const App = () => {
               sizeAttenuation={false}
               depthWrite={false}
             />
-            {points.map((position) => (
+            {points.map((position, idx) => (
               <Point
+                key={idx}
                 color="hotpink"
                 position={position as [number, number, number]}
               />
@@ -44,12 +47,12 @@ export const App = () => {
           <Center>
             <Float floatIntensity={5} speed={2}>
               <Text3D
-                font={"/assets/sf_mono_light.json"}
+                font={"/futura.json"}
                 bevelEnabled
                 curveSegments={200}
                 bevelThickness={0.01}
                 height={0.1}
-                letterSpacing={-0.1}
+                letterSpacing={0.08}
                 size={1}
               >
                 skdv
@@ -62,13 +65,13 @@ export const App = () => {
       <div className="fixed bottom-0 flex flex-row w-full justify-center my-8">
         <a href="https://github.com/sk-dv" target="_blank">
           <div className="w-14">
-            <img src="/assets/github.png" />
+            <img src={github} />
           </div>
         </a>
         <p className="mx-4" />
         <a href="https://www.linkedin.com/in/felipeosornio/" target="_blank">
           <div className="w-14">
-            <img src="/assets/linkedin.png" />
+            <img src={linkedin} />
           </div>
         </a>
       </div>
