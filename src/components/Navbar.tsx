@@ -13,6 +13,7 @@ export default function Navbar() {
       <div className="flex items-center gap-6 opacity-80">
         <Link to="/about" className="hover:opacity-100 transition">about</Link>
         <Link to="/galaxy" className="hover:opacity-100 transition">galaxy</Link>
+        <Link to="/tree" className="hover:opacity-100 transition">tree</Link>
         <button onClick={toggle} aria-label="toggle theme" className="hover:opacity-100 transition">
           {theme === 'dark' ? '☀' : '☾'}
         </button>

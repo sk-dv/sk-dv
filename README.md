@@ -1,7 +1,6 @@
 # skdv
 
-Sitio personal de Felipe Osornio (`skdv` / `pipe oz`).
-Live: **https://sk-dv.github.io/sk-dv/**
+Sitio personal · `skdv` / `pipe oz` · <sub>[live ↗](https://sk-dv.github.io/sk-dv/)</sub>
 
 ## Stack
 
@@ -15,18 +14,28 @@ Live: **https://sk-dv.github.io/sk-dv/**
 ```
 src/
 ├─ pages/
-│  ├─ Landing.tsx     Texto 3D "skdv" flotante y rotable
-│  ├─ About.tsx       Bio editorial (pipe oz, memento mori)
-│  └─ GalaxyPage.tsx  Experimento de partículas
+│  ├─ Landing.tsx       Texto 3D "skdv" flotante y rotable
+│  ├─ About.tsx         Bio editorial (pipe oz, memento mori)
+│  ├─ GalaxyPage.tsx    Experimento de partículas
+│  └─ Tree/             Árbol de expresión (infijo → posfijo → 3D)
+│     ├─ TreePage.tsx   Input, recorridos y canvas
+│     ├─ BoxNode.tsx    Nodo R3F (caja + texto + aristas)
+│     ├─ algorithms.ts  infixToPostfix, postfixToTree, recorridos
+│     └─ tree-node.ts   Modelo TreeNode<T>
 ├─ components/
-│  ├─ Navbar.tsx      Nav fijo con mix-blend-difference
+│  ├─ Navbar.tsx        Nav fijo con mix-blend-difference
 │  ├─ FloatingText.tsx  Text3D + Float + OrbitControls
-│  └─ Galaxy.tsx      Galaxia espiral generativa, theme-aware
-├─ theme.tsx          Context light/dark con persistencia
+│  └─ Galaxy.tsx        Galaxia espiral generativa, theme-aware
+├─ theme.tsx            Context light/dark con persistencia
 ├─ App.tsx
 ├─ main.tsx
-└─ index.css          Tailwind + tipografía EB Garamond / Inter
+└─ index.css            Tailwind + tipografía EB Garamond / Inter
 ```
+
+## Experimentos
+
+- **/galaxy** — galaxia espiral generativa (R3F + shaders simples).
+- **/tree** — árbol de expresión. Parsea una expresión infija (`(a+b)-c`), la convierte a posfija con _shunting yard_, arma el árbol y lo dibuja en 3D. Muestra los tres recorridos (pre, in, post).
 
 ## Estética
 
