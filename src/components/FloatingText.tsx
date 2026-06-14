@@ -9,7 +9,7 @@ export default function FloatingText() {
     <Center>
       <Float floatIntensity={1.5} speed={1.4} rotationIntensity={0.4}>
         <Text3D
-          font="/fonts/futura.json"
+          font={`${import.meta.env.BASE_URL}fonts/futura.json`}
           bevelEnabled
           curveSegments={32}
           bevelThickness={0.02}
