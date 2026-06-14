@@ -23,6 +23,40 @@ export default function About() {
           </p>
         </section>
 
+        <hr className="border-current opacity-10 mt-12 mb-10" />
+
+        <section>
+          <p className="text-[11px] tracking-[0.2em] uppercase opacity-50 mb-8">trabajos</p>
+          <ul className="space-y-10">
+            <li className="grid grid-cols-[4rem_1fr] gap-6 items-baseline">
+              <span className="text-[11px] tracking-widest uppercase opacity-40">2026</span>
+              <div>
+                <h3 className="font-serif text-xl">Oído Armónico</h3>
+                <p className="font-serif italic text-sm opacity-60 mt-1.5 leading-relaxed">
+                  Entrenamiento auditivo. Acordes, grados, intervalos y dictado.
+                </p>
+                <div className="flex gap-5 mt-4 text-[11px] tracking-widest uppercase opacity-50">
+                  <a href="https://sk-dv.github.io/entrenador-auditivo/" target="_blank" rel="noreferrer" className="hover:opacity-100 transition">sitio ↗</a>
+                  <a href="https://github.com/sk-dv/entrenador-auditivo" target="_blank" rel="noreferrer" className="hover:opacity-100 transition">código ↗</a>
+                </div>
+              </div>
+            </li>
+            <li className="grid grid-cols-[4rem_1fr] gap-6 items-baseline">
+              <span className="text-[11px] tracking-widest uppercase opacity-40">2026</span>
+              <div>
+                <h3 className="font-serif text-xl">Portafolio · Arte &amp; Cultura</h3>
+                <p className="font-serif italic text-sm opacity-60 mt-1.5 leading-relaxed">
+                  Notas para EIA 4, INBAL. Cultura, estética, percepción e interpretación.
+                </p>
+                <div className="flex gap-5 mt-4 text-[11px] tracking-widest uppercase opacity-50">
+                  <a href="https://sk-dv.github.io/portafolio-arte/" target="_blank" rel="noreferrer" className="hover:opacity-100 transition">sitio ↗</a>
+                  <a href="https://github.com/sk-dv/portafolio-arte" target="_blank" rel="noreferrer" className="hover:opacity-100 transition">código ↗</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
         <hr className="border-current opacity-10 mt-12 mb-6" />
 
         <footer className="flex gap-6 text-[12px] tracking-widest uppercase opacity-50">
