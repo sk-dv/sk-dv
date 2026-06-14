@@ -102,10 +102,12 @@ export default function TreePage() {
               {TIMELINE.map((t) => (
                 <li key={t.date} className="relative pl-8">
                   <span className="absolute left-[-5px] top-[6px] w-3 h-3 rounded-full bg-stone-900 dark:bg-stone-100 ring-4 ring-stone-50 dark:ring-stone-950" />
-                  <time className="block text-[11px] tracking-[0.2em] uppercase text-stone-600 dark:text-stone-400">
+                  <time className="block text-[11px] tracking-[0.2em] uppercase text-stone-700 dark:text-stone-300">
                     {t.date}
                   </time>
-                  <p className="font-serif text-lg mt-1 text-stone-900 dark:text-stone-100">{t.title}</p>
+                  <p className="font-sans font-medium text-base mt-1 text-stone-900 dark:text-stone-50">
+                    {t.title}
+                  </p>
                 </li>
               ))}
             </ol>
