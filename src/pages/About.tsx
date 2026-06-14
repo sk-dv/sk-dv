@@ -36,7 +36,7 @@ export default function About() {
                   Entrenamiento auditivo. Acordes, grados, intervalos y dictado.
                 </p>
                 <div className="flex gap-5 mt-4 text-[11px] tracking-widest uppercase opacity-50">
-                  <a href="https://sk-dv.github.io/entrenador-auditivo/" target="_blank" rel="noreferrer" className="hover:opacity-100 transition">sitio ↗</a>
+                  <a href="https://entrenador-auditivo.web.app" target="_blank" rel="noreferrer" className="hover:opacity-100 transition">sitio ↗</a>
                   <a href="https://github.com/sk-dv/entrenador-auditivo" target="_blank" rel="noreferrer" className="hover:opacity-100 transition">código ↗</a>
                 </div>
               </div>
