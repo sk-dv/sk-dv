@@ -1,6 +1,6 @@
 import { useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
-import { AdditiveBlending, Color, NormalBlending, Points } from 'three'
+import { AdditiveBlending, Color, MultiplyBlending, Points } from 'three'
 import { useTheme } from '../theme'
 
 type GalaxyProps = {
@@ -25,9 +25,9 @@ export default function Galaxy({
   const { theme } = useTheme()
   const ref = useRef<Points>(null)
 
-  const insideColor = theme === 'dark' ? '#ff6030' : '#8b5cf6'
-  const outsideColor = theme === 'dark' ? '#1b3984' : '#1e3a8a'
-  const blending = theme === 'dark' ? AdditiveBlending : NormalBlending
+  const insideColor = theme === 'dark' ? '#ff6030' : '#7c7099'
+  const outsideColor = theme === 'dark' ? '#1b3984' : '#2d2b45'
+  const blending = theme === 'dark' ? AdditiveBlending : MultiplyBlending
 
   const { positions, colors } = useMemo(() => {
     const positions = new Float32Array(count * 3)
