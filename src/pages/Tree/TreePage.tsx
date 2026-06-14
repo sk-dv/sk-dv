@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import { MOUSE, TOUCH } from 'three'
 import { useTheme } from '../../theme'
 import { buildTree, type Traversal } from './algorithms'
 import type { TreeNode } from './tree-node'
@@ -78,6 +79,8 @@ export default function TreePage() {
               enableZoom
               screenSpacePanning
               enableDamping
+              mouseButtons={{ LEFT: MOUSE.PAN, MIDDLE: MOUSE.DOLLY, RIGHT: MOUSE.PAN }}
+              touches={{ ONE: TOUCH.PAN, TWO: TOUCH.DOLLY_PAN }}
             />
             {drawn.nodes.map((n, i) => (
               <BoxNode key={`${n.position?.x}-${n.position?.y}-${i}`} node={n} fill={fill} text={text} />
@@ -88,15 +91,15 @@ export default function TreePage() {
           </p>
         </div>
 
-        <section className="mt-20 pt-12 border-t border-current/20">
-          <p className="text-[11px] tracking-[0.2em] uppercase opacity-60 mb-8">desarrollo</p>
+        <section className="mt-20 pt-12 border-t border-current/30">
+          <p className="text-[11px] tracking-[0.2em] uppercase mb-8">desarrollo</p>
           <ol className="relative space-y-7 ml-2">
-            <span aria-hidden className="absolute left-0 top-2 bottom-2 w-px bg-current opacity-30" />
+            <span aria-hidden className="absolute left-0 top-2 bottom-2 w-px bg-current opacity-60" />
             {TIMELINE.map((t) => (
               <li key={t.date} className="relative pl-8">
-                <span className="absolute left-[-3px] top-[7px] w-[7px] h-[7px] rounded-full bg-current opacity-80" />
-                <time className="block text-[11px] tracking-[0.2em] uppercase opacity-60">{t.date}</time>
-                <p className="font-serif text-base mt-1">{t.title}</p>
+                <span className="absolute left-[-3px] top-[7px] w-[7px] h-[7px] rounded-full bg-current" />
+                <time className="block text-[11px] tracking-[0.2em] uppercase opacity-80">{t.date}</time>
+                <p className="font-serif text-lg mt-1">{t.title}</p>
               </li>
             ))}
           </ol>
