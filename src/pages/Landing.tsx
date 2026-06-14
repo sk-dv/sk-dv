@@ -1,7 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { Suspense } from 'react'
-import { Link } from 'react-router-dom'
 import FloatingText from '../components/FloatingText'
 
 export default function Landing() {
@@ -17,19 +16,11 @@ export default function Landing() {
         <OrbitControls enableZoom={false} enablePan={false} enableDamping />
       </Canvas>
 
-      <div className="absolute left-0 right-0 bottom-36 flex justify-center pointer-events-none">
+      <div className="absolute left-0 right-0 bottom-32 flex justify-center pointer-events-none">
         <p className="font-serif italic text-base md:text-lg opacity-60">pipe oz</p>
       </div>
 
-      <div className="absolute bottom-16 left-0 right-0 flex justify-center gap-6 text-[12px] tracking-widest uppercase opacity-60">
-        <Link to="/galaxy" className="hover:opacity-100 transition">galaxy</Link>
-        <span className="opacity-50">·</span>
-        <Link to="/tree" className="hover:opacity-100 transition">tree</Link>
-        <span className="opacity-50">·</span>
-        <Link to="/about" className="hover:opacity-100 transition">about</Link>
-      </div>
-
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-6 text-[11px] tracking-widest uppercase opacity-40">
+      <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-6 text-[12px] tracking-widest uppercase opacity-50">
         <a href="https://github.com/sk-dv" target="_blank" rel="noreferrer" className="hover:opacity-100 transition">github</a>
         <span>·</span>
         <a href="https://www.linkedin.com/in/felipeosornio/" target="_blank" rel="noreferrer" className="hover:opacity-100 transition">linkedin</a>
