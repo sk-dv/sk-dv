@@ -1,6 +1,6 @@
-# skdv
+# [skdv](https://sk-dv.github.io/sk-dv/)
 
-Sitio personal · `skdv` / `pipe oz` · <sub>[live ↗](https://sk-dv.github.io/sk-dv/)</sub>
+Sitio personal · `skdv` / `pipe oz`
 
 ## Stack
 
