@@ -91,18 +91,25 @@ export default function TreePage() {
           </p>
         </div>
 
-        <section className="mt-20 pt-12 border-t border-current/30">
-          <p className="text-[11px] tracking-[0.2em] uppercase mb-8">desarrollo</p>
-          <ol className="relative space-y-7 ml-2">
-            <span aria-hidden className="absolute left-0 top-2 bottom-2 w-px bg-current opacity-60" />
-            {TIMELINE.map((t) => (
-              <li key={t.date} className="relative pl-8">
-                <span className="absolute left-[-3px] top-[7px] w-[7px] h-[7px] rounded-full bg-current" />
-                <time className="block text-[11px] tracking-[0.2em] uppercase opacity-80">{t.date}</time>
-                <p className="font-serif text-lg mt-1">{t.title}</p>
-              </li>
-            ))}
-          </ol>
+        <section className="mt-20 pt-12 border-t border-stone-300 dark:border-stone-700">
+          <p className="text-[11px] tracking-[0.2em] uppercase mb-8 text-stone-900 dark:text-stone-100">desarrollo</p>
+          <div className="relative ml-2">
+            <span
+              aria-hidden
+              className="absolute left-0 top-2 bottom-2 w-[2px] rounded bg-stone-400 dark:bg-stone-500"
+            />
+            <ol className="space-y-7">
+              {TIMELINE.map((t) => (
+                <li key={t.date} className="relative pl-8">
+                  <span className="absolute left-[-5px] top-[6px] w-3 h-3 rounded-full bg-stone-900 dark:bg-stone-100 ring-4 ring-stone-50 dark:ring-stone-950" />
+                  <time className="block text-[11px] tracking-[0.2em] uppercase text-stone-600 dark:text-stone-400">
+                    {t.date}
+                  </time>
+                  <p className="font-serif text-lg mt-1 text-stone-900 dark:text-stone-100">{t.title}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
         </section>
       </div>
     </div>
