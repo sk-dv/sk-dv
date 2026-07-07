@@ -54,6 +54,18 @@ export default function About() {
                 </div>
               </div>
             </li>
+            <li className="grid grid-cols-[4rem_1fr] gap-6 items-baseline">
+              <span className="text-[11px] tracking-widest uppercase opacity-40">2020</span>
+              <div>
+                <h3 className="font-serif text-xl">Consultorio digital</h3>
+                <p className="font-serif italic text-sm opacity-60 mt-1.5 leading-relaxed">
+                  SaaS para consultorios médicos. Agenda, expedientes clínicos, página web y pagos.
+                </p>
+                <div className="flex gap-5 mt-4 text-[11px] tracking-widest uppercase opacity-50">
+                  <a href="https://github.com/sk-dv/consultorio-digital" target="_blank" rel="noreferrer" className="hover:opacity-100 transition">código ↗</a>
+                </div>
+              </div>
+            </li>
           </ul>
         </section>
 
