@@ -5,7 +5,6 @@ export default function About() {
         <header className="mb-10">
           <p className="text-[11px] tracking-[0.2em] uppercase opacity-50 mb-3">about</p>
           <h1 className="font-serif text-4xl">pipe oz</h1>
-          <p className="font-serif italic text-sm opacity-50 mt-2">memento mori</p>
         </header>
 
         <hr className="border-current opacity-10 mb-10" />
