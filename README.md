@@ -1,47 +1,29 @@
 # [skdv](https://sk-dv.github.io/sk-dv/)
 
-Sitio personal · `skdv` / `pipe oz`
+Mi sitio personal. Soy Felipe Osornio (`pipe oz`, *memento mori*): desarrollador de software
+que programa con lo que le mueve: la música, lo visual, los videojuegos y la literatura.
 
-## Stack
+## Lo que hago aquí
 
-- Vite 8 + React 19 + TypeScript
-- Tailwind v4 (con `@custom-variant dark`)
-- React Three Fiber + drei + three.js
-- React Router DOM
+- **[Oído Armónico](https://entrenador-auditivo.web.app)** — entrenador auditivo: acordes, grados, intervalos y dictado. ([código](https://github.com/sk-dv/entrenador-auditivo))
+- **[Portafolio · Arte & Cultura](https://sk-dv.github.io/portafolio-arte/)** — notas de EIA 4 (INBAL) sobre cultura, estética, percepción e interpretación. ([código](https://github.com/sk-dv/portafolio-arte))
+- **veintiuno** — blackjack de 2020 que retomé con una especificación y pruebas de sus reglas.
+- **Sudoku 8bit** — juego en Flutter con backend en Flask y PostgreSQL.
+- **[Consultorio digital](https://github.com/sk-dv/consultorio-digital)** — SaaS para consultorios médicos (2020).
 
-## Estructura
+## Experimentos del sitio
 
-```
-src/
-├─ pages/
-│  ├─ Landing.tsx       Texto 3D "skdv" flotante y rotable
-│  ├─ About.tsx         Bio editorial (pipe oz, memento mori)
-│  ├─ GalaxyPage.tsx    Experimento de partículas
-│  └─ Tree/             Árbol de expresión (infijo → posfijo → 3D)
-│     ├─ TreePage.tsx   Input, recorridos y canvas
-│     ├─ BoxNode.tsx    Nodo R3F (caja + texto + aristas)
-│     ├─ algorithms.ts  infixToPostfix, postfixToTree, recorridos
-│     └─ tree-node.ts   Modelo TreeNode<T>
-├─ components/
-│  ├─ Navbar.tsx        Nav fijo con mix-blend-difference
-│  ├─ FloatingText.tsx  Text3D + Float + OrbitControls
-│  └─ Galaxy.tsx        Galaxia espiral generativa, theme-aware
-├─ theme.tsx            Context light/dark con persistencia
-├─ App.tsx
-├─ main.tsx
-└─ index.css            Tailwind + tipografía EB Garamond / Inter
-```
+- **/tree** — árbol de expresión: convierte una expresión infija (`(a+b)-c`) a posfija con *shunting yard*, arma el árbol y lo dibuja en 3D con sus tres recorridos.
+- **/galaxy** — galaxia espiral generativa.
+- **Algoritmos que suenan** — en preparación: recorridos de cuadrícula (BFS, DFS, backtracking) donde cada paso toca una nota.
 
-## Experimentos
+## Cómo está hecho
 
-- **/galaxy** — galaxia espiral generativa (R3F + shaders simples).
-- **/tree** — árbol de expresión. Parsea una expresión infija (`(a+b)-c`), la convierte a posfija con _shunting yard_, arma el árbol y lo dibuja en 3D. Muestra los tres recorridos (pre, in, post).
+Vite + React + TypeScript, Tailwind, React Three Fiber y React Router. Estética editorial:
+EB Garamond para el texto, Inter para la navegación, y una paleta de `stone-50` a `stone-950`
+con modo claro y oscuro. Las páginas viven en `src/pages/` y los componentes en `src/components/`.
 
-## Estética
-
-Editorial minimalista — serif (EB Garamond) para títulos y cuerpo, sans (Inter) para nav y metadatos. Paleta `stone-50 ↔ stone-950` con acentos de la galaxia.
-
-## Dev
+## Correrlo
 
 ```sh
 npm install
@@ -49,13 +31,11 @@ npm run dev    # http://localhost:5173/sk-dv/
 npm run build
 ```
 
-## Deploy
+## Publicarlo
 
-GitHub Pages vía Actions. Disparado por tags `vN.N.N`:
+GitHub Pages con Actions, disparado por etiquetas `vN.N.N` (`.github/workflows/deploy.yml`):
 
 ```sh
 git tag v0.1.2
 git push origin v0.1.2
 ```
-
-El workflow está en `.github/workflows/deploy.yml`.
